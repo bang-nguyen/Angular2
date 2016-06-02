@@ -23,6 +23,7 @@ import { HeroService } from './hero.service';
     HeroService
   ]
 })
+
 @RouteConfig([
   {
     path: '/dashboard',
@@ -41,13 +42,7 @@ import { HeroService } from './hero.service';
     component: HeroesComponent
   }
 ])
+
 export class AppComponent {
   title = 'Tour of Heroes';
 }
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
