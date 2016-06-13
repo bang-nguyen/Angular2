@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteParams } from '@angular/router-deprecated';
 
-import { Hero } from './hero';
+import { Hero } from './models/hero';
 import { HeroService } from './hero.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { HeroService } from './hero.service';
     templateUrl: 'app/hero-detail.component.html',
     styleUrls: ['app/hero-detail.component.css']
 })
+
 export class HeroDetailComponent implements OnInit {
     hero: Hero;
 
