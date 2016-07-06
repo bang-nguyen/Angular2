@@ -68,8 +68,3 @@ var ZooUtil = ZooUtil || {
         return el;
     }
 }
-
-
-
-//var myDiv = ZooUI(null).createElement("div", { class: "my-div", id: "my-id" })
-
