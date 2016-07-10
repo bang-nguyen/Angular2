@@ -16,27 +16,13 @@ const ESLINT_CONFIG_FILE = PATH.resolve(__dirname, ROOT, 'tools/build/config/esl
 
 var webpackConfig = {
     entry: {
-        app: [
-            APP_ENTRY_FILE
-        ],
-        vendor: [
-            'react',
-            'react-dom',
-        ]
+        app: APP_ENTRY_FILE
     },
     output: {
         path: BUILD_FOLDER,
         publicPath: PUBLIC_PATH,
         filename: BUILD_FILE
     },
-    resolve: {
-        extensions: ['', '.js', '.jsx'],
-        modules: [
-            'client',
-            'node_modules',
-        ],
-    },
-
     devtool: 'inline-source-map',
     debug: true,
     bail: true,
@@ -72,13 +58,13 @@ var webpackConfig = {
             }
         ]
     },
-    // externals: {
-    //     'axios': 'axios',
-    //     'react': 'React',
-    //     'react-router': 'ReactRouter',
-    //     'history': 'History',
-    //     'react-dom': 'ReactDOM'
-    // },
+    externals: {
+        'axios': 'axios',
+        'react': 'React',
+        'react-router': 'ReactRouter',
+        'history': 'History',
+        'react-dom': 'ReactDOM'
+    },
     plugins: [
         new webpack.NoErrorsPlugin()
     ]

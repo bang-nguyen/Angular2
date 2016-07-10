@@ -8,5 +8,6 @@
     "maxAge": "1d",
     "development": true,
     "templateRoot": "templates",
-    "templateLayouts": "templates/layouts"
+    "templateLayouts": "templates/layouts",
+    "mongoDbUrl": "mongodb://localhost:27017/react-universal"
 }
