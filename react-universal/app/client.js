@@ -5,10 +5,12 @@ import {render} from 'react-dom';
 
 import routes from './routes';
 
-process.APP_STATE = window.APP_STATE || {};
+import ContextWrapper from './components/common/ContextWrapper';
 
 render((
-    <Router history={createHistory()}>
-        {routes}
-    </Router>
+    <ContextWrapper data={window.APP_STATE || {}}>
+        <Router history={createHistory()}>
+            {routes}
+        </Router>
+    </ContextWrapper>
 ), document.querySelectorAll('[data-ui-role="content"]')[0]);

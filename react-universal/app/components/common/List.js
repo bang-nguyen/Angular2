@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default class List extends React.Component {
-
     render() {
         const ItemType = this.props.itemType;
         const items = this.props.items || [];
@@ -22,3 +21,4 @@ export default class List extends React.Component {
         return markupItems;
     }
 }
+
