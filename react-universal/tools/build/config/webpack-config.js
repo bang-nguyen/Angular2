@@ -62,7 +62,6 @@ var webpackConfig = {
         'axios': 'axios',
         'react': 'React',
         'react-router': 'ReactRouter',
-        'history': 'History',
         'react-dom': 'ReactDOM'
     },
     plugins: [

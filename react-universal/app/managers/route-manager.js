@@ -7,7 +7,7 @@ import nconf from 'nconf';
 
 import React from 'react'
 import {renderToString} from 'react-dom/server';
-import {match, RoutingContext} from 'react-router';
+import {match, RouterContext} from 'react-router';
 
 import baseManager from './base-manager';
 import routes from '../routes';
@@ -72,7 +72,7 @@ const routeManager = Object.assign({}, baseManager, {
     render(renderProps, data) {      
         let html = renderToString(
             <ContextWrapper data={data}>
-                <RoutingContext {...renderProps}/>
+                <RouterContext {...renderProps}/>
             </ContextWrapper>
         );
 
