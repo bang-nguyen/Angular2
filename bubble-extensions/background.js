@@ -7,26 +7,6 @@ function genericOnClick(info, tab) {
   sendData("http://localhost:3000/api/test", { name: "trung" });
 }
 
-var serialize = function (obj) {
-  var str = [];
-  for (var p in obj)
-    if (obj.hasOwnProperty(p)) {
-      str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-    }
-  return str.join("&");
-}
-
-var sendData = function (url, data) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', url, true);
-  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-  xhr.onload = function () {
-    // do something to response
-    console.log(this.responseText);
-  };
-  xhr.send(serialize(data));
-}
-
 // Create one test item for each context type.
 var context = "selection";
 var id = chrome.contextMenus.create({
@@ -83,3 +63,16 @@ chrome.gcm.onMessage.addListener(function (message) {
     console.log("Click on notifications");
   })
 });
+
+
+chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
+  console.log(buttonIndex);
+
+  if (buttonIndex === 1) {
+    chrome.notifications.clear("not-1");
+    return;
+  }
+
+  window.open("http://www.ogamic.com")
+
+})

@@ -11,7 +11,8 @@
     "notifications",
     "gcm",
     "contextMenus",
-    "http://localhost:3000/"
+    "http://localhost:3000/",
+    "http://www.ogamic.com/"
   ],
   "background": {
     "scripts": [
@@ -27,7 +28,9 @@
     "default_title": "Google Mail", // optional; shown in tooltip
     "default_popup": "popup.html" // optional
   },
-  "web_accessible_resources": ["options.html"],
+  "web_accessible_resources": [
+    "options.html"
+  ],
   "manifest_version": 2,
   "homepage_url": "http://www.ogamic.com",
   "author": "bang.nguyen"
