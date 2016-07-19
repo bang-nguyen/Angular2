@@ -1,0 +1,34 @@
+{
+  "name": "Bubble",
+  "description": "Shows some of the features of the Context Menus API",
+  "version": "0.6",
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "permissions": [
+    "notifications",
+    "gcm",
+    "contextMenus",
+    "http://localhost:3000/"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": { // optional
+      "16": "images/16.png", // optional
+      "48": "images/48.png" // optional
+    },
+    "default_title": "Google Mail", // optional; shown in tooltip
+    "default_popup": "popup.html" // optional
+  },
+  "web_accessible_resources": ["options.html"],
+  "manifest_version": 2,
+  "homepage_url": "http://www.ogamic.com",
+  "author": "bang.nguyen"
+}
