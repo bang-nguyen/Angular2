@@ -1,0 +1,3 @@
+Bubble = window.Bubble || {
+    
+}

@@ -66,8 +66,6 @@ chrome.gcm.onMessage.addListener(function (message) {
 
 
 chrome.notifications.onButtonClicked.addListener(function (notificationId, buttonIndex) {
-  console.log(buttonIndex);
-
   if (buttonIndex === 1) {
     chrome.notifications.clear("not-1");
     return;

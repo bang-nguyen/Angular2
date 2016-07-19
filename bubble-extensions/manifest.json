@@ -11,22 +11,23 @@
     "notifications",
     "gcm",
     "contextMenus",
+    "storage",
     "http://localhost:3000/",
     "http://www.ogamic.com/"
   ],
   "background": {
     "scripts": [
-      "background.js"
+      "js/background.js"
     ]
   },
-  "options_page": "options.html",
+  "options_page": "html/options.html",
   "browser_action": {
     "default_icon": { // optional
       "16": "images/16.png", // optional
       "48": "images/48.png" // optional
     },
-    "default_title": "Google Mail", // optional; shown in tooltip
-    "default_popup": "popup.html" // optional
+    "default_title": "Bubble", // optional; shown in tooltip
+    "default_popup": "html/popup.html" // optional
   },
   "web_accessible_resources": [
     "options.html"
