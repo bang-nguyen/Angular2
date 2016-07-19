@@ -4,6 +4,8 @@ import {IndexRoute, Route} from 'react-router';
 import App from './components/app';
 import NoMatch from './components/common/NoMatch';
 
+import CreateUser from './components/user/CreateUser';
+
 import Dashboard from './components/dashboard/Dashboard';
 import LatestBills from './components/bill/LatestBills';
 import DetailedBill from './components/bill/DetailedBill';
@@ -31,6 +33,7 @@ export default (
             <IndexRoute component={LatestsBillsConnector}/>
             <Route path="bill/:id" component={DetailedBillConnector}/>
         </Route>
+        <Route path="user/add" component={CreateUser}/>
         <Route path="*" component={NoMatch}/>
     </Route>
 );

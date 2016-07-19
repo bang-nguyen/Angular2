@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Link} from 'react-router';
 
-export default class NoMatch extends React.Component {
+export default class CreateUser extends React.Component {
     static get contextTypes() {
         return {
             root: React.PropTypes.string
@@ -13,7 +13,7 @@ export default class NoMatch extends React.Component {
         return (
             <section className="app-content">
                 <header className="section-header">
-                    <h3 className="title">Not Found</h3>
+                    <h3 className="title">Hello</h3>
                     <Link className="link" to={this.context.root}>&#171; Home</Link>
                 </header>
             </section>

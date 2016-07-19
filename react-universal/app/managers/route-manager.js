@@ -26,7 +26,7 @@ const routeManager = Object.assign({}, baseManager, {
         const router = express.Router();
     
         router.get('*', (req, res) => {
-            match({routes, location: req.originalUrl}, (err, redirectLocation, renderProps) => {
+            match({routes, location: req.url}, (err, redirectLocation, renderProps) => {
                 const {promises, components} = this.mapComponentsToPromises(
                     renderProps.components, renderProps.params);
 
